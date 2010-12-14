@@ -2,6 +2,8 @@ Sis::Application.routes.draw do
   get "students/index"
 
   get "students/show"
+  
+  get "students/search"
 
   get "students/new"
 

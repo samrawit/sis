@@ -1,0 +1,7 @@
+<pre>
+<%= form_tag students_show_path, :method => 'get' do %>
+  <%= label_tag "Search by name" %>
+  <%= text_field_tag :name, params[:name] %>
+  <%= submit_tag "Submit" %>
+<% end %>
+</pre>
