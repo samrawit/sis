@@ -1,4 +1,5 @@
 Sis::Application.routes.draw do
+   resources :clearance
   get "students/index"
 
   get "students/show"
@@ -8,6 +9,14 @@ Sis::Application.routes.draw do
   get "students/edit"
 
   get "students/yaredo"
+   get "students/search"
+  
+  
+   get "clearance/show"
+   get "clearance/new"
+   post "clearance/create"
+   post "clearance/update"
+   get "clearance/edit"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

@@ -10,7 +10,19 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20101213184805) do
+ActiveRecord::Schema.define(:version => 20101214114359) do
+
+  create_table "clearances", :force => true do |t|
+    t.string   "reason_for"
+    t.date     "last_date_attend"
+    t.integer  "class_year"
+    t.integer  "clearance_semister"
+    t.date     "clearance_date"
+    t.text     "reason_for_withdrawal"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "student_id"
+  end
 
   create_table "people", :force => true do |t|
     t.string   "first_name"

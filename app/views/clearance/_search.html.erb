@@ -1,0 +1,28 @@
+<%= form_tag students_show_path, :method => 'get' do %>
+  <%= label_tag "Search by name" %>
+  <%= text_field_tag :name, params[:name] %>
+  <%= submit_tag "Search" %>
+<% end %>
+
+
+  <p> Search results </p>
+<% if @student.empty? %>
+  <p> No such Record </p>
+<% else %>
+  <table border="+1">
+    <tr>
+      <td>Id</td>
+      <td>Name</td>
+      <td>M.Name</td>
+      <td>Sex</td>
+    </tr>
+    <tr>
+    <% for student in @student %>
+      <td><%= student.id %></td>
+      <td><%= student.first_name %></td>
+      <td><%= student.middle_name %></td>
+      <td><%= student.sex %></td>
+    <% end %>
+    </tr>
+  </table>
+<% end %>
