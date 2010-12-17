@@ -1,22 +1,27 @@
-<%= render :partial=>"search" %>
- <h1>New Clearance Application</h1>
- <% form_for :clearance, :url => { :action => 'create' }  do |t| %>
-
-  Clearance For : <%= t.radio_button :reason_for, 'withdrawal' %> withdrawal
+ <div id="mainWrapper" style="border:0px dotted black;width:50%;margin-left:150pt;
+ padding:4px;background:#ffffff" align="justify">
+ <h1 style="margin:2px;" align="center">New Clearance Application</h1>
+ <hr/>
+ <p><%= flash[:notice] %></p>
+ <%= form_for :clearance, :url => { :action => 'create' }  do |t| %>   
+ <div id="1121" style="background:#efefef; width:100%;border:1px">
+ 
+ </div>
+ <!--student ID : <%= t.text_field :student_id %><br /><br />-->
+ * Clearance For : <%= t.radio_button :reason_for, 'withdrawal' %> withdrawal
                   <%= t.radio_button :reason_for, 'ID replacement' %>ID replacement
                   <%= t.radio_button :reason_for, 'End of Acadamic Year' %>End of Acadamic Year<br /><br />
   
-  Class Year <%= t.text_field :class_year %><br /><br />
   
-  Last Date Attended : <%= t.date_select :last_date_attend %><br /><br />
+ * Last Date Attended : <%= t.date_select :last_date_attend %><br /><br /> 
     
-  Clearance Semister : <%= t.text_field :clearance_semister %><br /><br />
+ * Clearance Semister : <%= t.text_field :clearance_semister %><br /><br />
     
-  Clearance Date <%= t.date_select :clearance_date %><br /><br />
+ * Clearance Date <%= t.date_select :clearance_date %><br /><br />
    
-  Reason for Withdrawal <%= t.text_field :reason_for_withdrawal %><br /><br />
+  * Reason for Withdrawal <%= t.text_field :reason_for_withdrawal %><br /><br />
   
-  <%= t.submit "Apply"%>
-  
+  <%= t.submit "Apply"%>  
 <% end %>
-
+</div>
+<hr/>

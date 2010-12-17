@@ -1,0 +1,16 @@
+<% @clearances.each do | clearance | %>
+<div id="wrapper">
+  <div style="border:1px solid #efefef;clear:both;width:60%;margin:2px;padding:2px;">
+     <div>Reason : <%= clearance.reason_for %></div>
+     <div>Last date Attended :  <%= clearance.last_date_attend %></div>
+     <div>Semester : <%= clearance.clearance_semister %></div>
+     <div>Date : <%= clearance.clearance_date %></div>      
+     <div>
+        <%= link_to 'Show', clearance %>
+        <%= link_to 'Edit', edit_clearance_path(clearance) %>      
+     </div>     
+   </div>   
+</div>
+<% end %>
+<td></td>
+</td>
