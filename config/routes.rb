@@ -1,16 +1,13 @@
 Sis::Application.routes.draw do
-<<<<<<< HEAD
  #resources :students 
  get "students/index"
-=======
-    resources :clearance
+ resources :clearance
   get "students/index"
 
   get "students/show"
   
   get "students/search"
 
->>>>>>> 53a8e214d8da48fff61c121e2740ad8404ec9b0e
   get "students/new"
  post "students/save"
   
@@ -45,12 +42,10 @@ Sis::Application.routes.draw do
   get "clearance/searchresult"
   get "clearance/search"
 
-<<<<<<< HEAD
+
   get "students/update"
   
   get "students/delete"
-=======
->>>>>>> 53a8e214d8da48fff61c121e2740ad8404ec9b0e
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
