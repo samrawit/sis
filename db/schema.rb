@@ -23,6 +23,7 @@ ActiveRecord::Schema.define(:version => 20101215171523) do
     t.datetime "updated_at"
     t.integer  "student_id"
   end
+
   create_table "people", :force => true do |t|
     t.string   "first_name"
     t.string   "middle_name"
@@ -33,7 +34,8 @@ ActiveRecord::Schema.define(:version => 20101215171523) do
     t.date     "birth_date"
     t.string   "mother_name"
   end
- create_table "students", :force => true do |t|
+
+  create_table "students", :force => true do |t|
     t.integer  "person_id"
     t.string   "id_number"
     t.datetime "created_at"
