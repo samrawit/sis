@@ -1,0 +1,8 @@
+Fri, 17 Dec 2010 03:18:06 +0300
+doc/README_FOR_APP	Tue, 14 Dec 2010 04:16:07 +0300
+app/helpers/application_helper.rb	Tue, 14 Dec 2010 04:16:07 +0300
+app/helpers/students_helper.rb	Tue, 14 Dec 2010 04:16:07 +0300
+app/controllers/application_controller.rb	Tue, 14 Dec 2010 04:16:07 +0300
+app/controllers/students_controller.rb	Fri, 17 Dec 2010 03:17:54 +0300
+app/models/student.rb	Fri, 17 Dec 2010 03:13:55 +0300
+app/models/person.rb	Wed, 15 Dec 2010 11:21:05 +0300
