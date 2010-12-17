@@ -1,4 +1,5 @@
 Sis::Application.routes.draw do
+  
   get "students/index"
 
   get "students/show"
@@ -6,8 +7,21 @@ Sis::Application.routes.draw do
   get "students/new"
 
   get "students/edit"
-
+  
+  
+  
   get "students/yaredo"
+  get "undergraduate_program/new"
+  post "undergraduate_program/Add"
+  post"undergraduate_program/create"
+  get "undergraduate_program/show_department"
+  post "undergraduate_program/create_department"
+  post "undergraduate_program/show"
+  get "undergraduate_program/show"
+  
+  get "undergrad_department/new"
+  
+  get "undergraduate_program/edit"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

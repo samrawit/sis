@@ -1,0 +1,2 @@
+module UndergradDepartmentHelper
+end
