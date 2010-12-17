@@ -1,7 +1,16 @@
-<pre>
+
+<h2> Find a Student </h2>
 <%= form_tag students_show_path, :method => 'get' do %>
-  <%= label_tag "Search by name" %>
-  <%= text_field_tag :name, params[:name] %>
+
+  <%= label_tag "First Name" %> 
+  <%= text_field_tag :fname, params[:fname] %> <br /> <br />
+  <%= label_tag "Middle Number" %> 
+  <%= text_field_tag :mname, params[:mname] %> <br /> <br />
+  <%= label_tag "ID Number" %> 
+  <%= text_field_tag :stud_id, params[:stud_id] %> <br /> <br />
+  <%= label_tag "Sex" %>
+  <%= select_tag :sex, options_for_select(['','M','F']) %> <br /> <br />
+
   <%= submit_tag "Submit" %>
 <% end %>
-</pre>
+

@@ -1,11 +1,10 @@
 <!--<h1>Students#show</h1>-->
 <!--<p>Find me in app/views/students/show.html.erb</p>-->
 
-<%= form_tag students_show_path, :method => 'get' do %>
-  <%= label_tag "Search by name" %>
-  <%= text_field_tag :name, params[:name] %>
-  <%= submit_tag "Submit" %>
-<% end %>
+
+
+<!--<%= @person.inspect %>
+<%= @stud.inspect %><br/><br/>-->
 
   <p> Search results </p>
 <% if @student.empty? %>
@@ -13,16 +12,17 @@
 <% else %>
   <table border="+1">
     <tr>
-      <td>Id</td>
+      <td>ID Number</td>
       <td>Name</td>
       <td>Middle Name</td>
       <td>Last Name</td>
       <td>Sex</td>
+
     </tr>
     
     <% for student in @student %>
        <tr>
-      <td><%= student.id %></td>
+      <td><%= student.id_number %></td>
       <td><%= student.first_name %></td>
       <td><%= student.middle_name %></td>
       <td><%= student.last_name %></td>
@@ -33,3 +33,4 @@
   </table>
 <% end %>
 
+<%= link_to 'Back to Search', :action => 'search' %>

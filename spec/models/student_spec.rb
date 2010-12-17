@@ -5,8 +5,8 @@ describe Student do
   context "is valid when " do
     it "has a student id " do 
       s = Student.new 
-      s.student_id = "SCR/1436/93"
-      s.student_id.should_not be_blank
+      s.id_number = "SCR/1436/93"
+      s.id_number.should_not be_blank
     end
   end
 end

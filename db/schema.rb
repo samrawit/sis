@@ -25,7 +25,7 @@ ActiveRecord::Schema.define(:version => 20101213184805) do
 
   create_table "students", :force => true do |t|
     t.integer  "person_id"
-    t.string   "student_id"
+    t.string   "id_number"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
