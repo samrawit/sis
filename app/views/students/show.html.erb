@@ -1,2 +1,17 @@
-<h1>Students#show</h1>
-<p>Find me in app/views/students/show.html.erb</p>
+<center><h3><%= @person.first_name+"\'s profile" %></h3>
+<hr />
+<br><table><tr><td><strong>First Name: </strong> </td>
+               <td><%= @person.first_name %></td></tr>
+           <tr><td><strong>Last Name :</strong> </td>
+               <td><%= @person.middle_name %></td></tr>
+           <tr><td><strong>Sex :</strong> </td>
+               <td><%= @person.sex %></td></tr>
+           <tr><td><strong>Date of birth:</strong> </td>
+               <td><%= @person.birth_date %></td></tr>
+           <tr><td><strong>Email:</strong></td>
+               <td><%= @person.email %></td></tr>
+    </table>
+<br>
+<hr />
+
+<%= link_to 'Back to list of students', {:action => 'list'} %></center>

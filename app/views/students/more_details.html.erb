@@ -1,0 +1,42 @@
+
+<h3 align="center"> New Student Profile </h3>
+<div align="center"
+  <fieldset style="width: 50%">
+  <legend align="center">ID currently by manual assignment</legend>
+
+      <%= label :student, :Id_number %>
+      <%= text_field :student, :stdID %><br/><br/>
+  </fieldset>
+</div>
+<div align="center"
+  <fieldset style="width: 50%">
+  <legend align="center">Family Background</legend>
+      <%= label :family, :Fathers_Occupation %>
+      <%= text_field :family, :fathers_occ %><br/><br/>
+      <%= label :family, :fathers_edu_level %>
+      <%= text_field :family, :fathers_ed_level %><br/><br/>
+      <%= label :family, :mothers_full_name %>
+      <%= text_field :family, :mothers_full_name %><br/><br/>
+      <%= label :family, :mothers_occ %>
+      <%= text_field :family, :mothers_occ %><br/><br/>
+      <%= label :family, :mothers_ed_level %>
+      <%= text_field :family, :mothers_ed_level %><br/><br/>
+  </fieldset>
+</div>
+<div align="center"
+  <fieldset style="width: 50%">
+  <legend align="center">Academic History</legend>
+      <%= label :family, :Fathers_Occupation %>
+      <%= text_field :family, :fathers_occ %><br/><br/>
+      <%= label :family, :fathers_edu_level %>
+      <%= text_field :family, :fathers_ed_level %><br/><br/>
+      <%= label :family, :mothers_full_name %>
+      <%= text_field :family, :mothers_full_name %><br/><br/>
+      <%= label :family, :mothers_occ %>
+      <%= text_field :family, :mothers_occ %><br/><br/>
+      <%= label :family, :mothers_ed_level %>
+      <%= text_field :family, :mothers_ed_level %><br/><br/>
+  </fieldset>
+</div>
+  <div align="center">  <%= submit_tag "Create Profile" %>  </div>
+    <% end %>

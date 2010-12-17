@@ -1,0 +1,19 @@
+
+<center><br><h3>List Of Students</h3><br>
+<% if flash[:notice].nil?
+else%>
+  <font color=green><%= "NOTE:- "+flash[:notice] %></font><br>
+<% end %>
+<hr />
+<p>These are the current students in our system</p>
+<table><ol>
+<% Person.find(:all, :order=>"first_name ASC").each do |c| %>
+
+<tr><td><li><%=  link_to c.first_name+" "+c.middle_name, {:action => 'show', :id => c.id} %></td>
+  <td><%=  link_to "Edit", :action => 'edit', :id => c %></td>
+  <td><%=  link_to "Delete", students_delete_path(:id => c.id), :confirm => "Are you sure?" %></td></tr>
+</li>
+<% end %></ol></table>
+
+
+<p><%= link_to "Add new student", {:action => 'new' }%></p> </center>

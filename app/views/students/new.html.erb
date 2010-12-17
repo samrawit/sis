@@ -1,2 +1,124 @@
-<h1>Students#new</h1>
-<p>Find me in app/views/students/new.html.erb</p>
+<center><br><h3>Create New Student Profile</h3><br>
+  <hr />
+
+<div align="center">
+<br>
+    <%= form_tag :action => "save" do %>
+      
+      <table><tr><td><%= label :person, :First_name %></td><td>
+      <%= text_field :person, :first_name %></td>
+      <td><%= label :person, :Middle_name %></td><td>
+      <%= text_field :person, :middle_name %></td>
+      <td><%= label :person, :Last_name %></td><td>
+      <%= text_field :person, :last_name %></td></tr>
+      <tr>
+      <td><%= label :person, :Amharic_Full_Name %></td><td colspan=3>
+      <%= text_field :person, :amh_full_name %></td></tr>
+    
+      <tr><td><%= label :person, :sex %></td><td>
+      <%= select :person, :sex, ["","female", "male"] %></td>
+      <td><%= label :person, :Nationality %></td><td>
+      <%= select :person, :nationality, ["Ethiopian", "Foreigner"] %></td>
+      <td><%= label :person, :Marital_status %></td><td>
+      <%= select :person, :marital_status, ["Single", "Married", "Divorced", "Widowed"] %></td>
+      </tr>
+      <tr><td><%= label :person, :email %></td><td>
+      <%= text_field :person, :email %></td>
+      <td><%= label :person, :Photo %></td><td>
+      <%= file_field :person, :photo %></td>
+      <td>&nbsp;</td><td>&nbsp;</td>
+      </tr>
+            <tr><td colspan=6>
+        <fieldset>
+        <legend align="left">Birth Details</legend>
+          <table><tr><td><%= label :person, :Date %></td><td>
+          <%= date_select( :person, :birth_date, :start_year => Time.now.year - 70, :end_year => Time.now.year - 16) %></td> 
+          <td><%= label :person, :Region %></td><td>
+          <%= text_field :person, :birth_rgn %></td>
+          <td><%= label :person, :Woreda %></td><td>
+          <%= text_field :person, :birth_woreda %></td></tr>
+          <tr><td><%= label :person, :Town %></td><td>
+          <%= text_field :person, :birth_town %></td>
+          <td><%= label :person, :Kebele %></td><td>
+          <%= text_field :person, :birth_kebele %></td>
+          <td>&nbsp;</td>
+          </tr></table></fieldset>
+      </td></tr>
+                  <tr><td colspan=6>
+        <fieldset>
+        <legend align="left">Emergency Details</legend>
+          <table><tr><td><%= label :person, :Full_name %></td><td>
+          <%= text_field :person, :em_name %></td>
+          <td><%= label :person, :Relationship %></td><td>
+          <%= text_field :person, :em_rnship %></td></tr>
+          <tr><td><%= label :person, :Region %></td><td>
+          <%= text_field :person, :em_rgn %></td>
+          <td><%= label :person, :Woreda %></td><td>
+          <%= text_field :person, :em_woreda %></td>
+          <td><%= label :person, :Town %></td><td>
+          <%= text_field :person, :em_town %></td></tr>
+          <tr><td><%= label :person, :House_number %></td><td>
+          <%= text_field :person, :em_hnum %></td>
+          <td><%= label :person, :Telephone_Resi %></td><td>
+          <%= text_field :person, :em_tel_res %></td>
+          <td><%= label :person, :Telephone_Off %></td><td>
+          <%= text_field :person, :em_tel_office %></td></tr>
+          </tr></table></fieldset>
+      </td></tr>
+      <tr><td colspan=6>
+         <fieldset>
+        <legend align="left">Family Information</legend>
+          <table><tr><td><%= label :family, :Fathers_Occupation %></td><td>
+          <%= text_field :family, :fathers_occ %></td>
+          <td><%= label :family, :Fathers_Education_Level %></td><td>
+          <%= select :family, :fathers_ed_level, ["", "Illiterate", "Elementary", "High School", "College"] %></td></tr>
+          <tr><td><%= label :family, :Mothers_Full_Name %></td><td>
+          <%= text_field :family, :mothers_full_name %></td>
+          <td><%= label :family, :Mothers_Occupation %></td><td>
+          <%= text_field :family, :mothers_occ %></td><td>
+          <td><%= label :family, :Mothers_Education_Level %></td><td>
+          <%= select :family, :mothers_ed_level, ["", "Illiterate", "Elementary", "High School", "College"] %>
+          </td></tr></table></fieldset>
+      </td></tr>
+      
+      <tr><td colspan=6>
+        <fieldset>
+        <legend align="left">Education Background</legend>
+          <table><tr><td><%= label :education, :Education_type %></td><td>
+          <%= select :education, :type, ["","Secondary Education", "Preparatory", "College"] %></td>
+          <td><%= label :education, :Institution_Name %></td><td>
+          <%= text_field :education, :institution_name %></td>
+          <td><%= label :education, :Institution_Region %></td><td>
+          <%= text_field :education, :institution_rgn %></td></tr>
+          <tr><td><%= label :education, :Institution_Zone %></td><td>
+          <%= text_field :education, :institution_zone %></td>
+          <td><%= label :education, :Institution_Town %></td><td>
+          <%= text_field :education, :institution_town %></td>
+          <td><%= label :education, :Stream %></td><td>
+          <%= text_field :education, :stream %></td></tr>
+          <tr><td><%= label :education, :Registration_Number %></td><td>
+          <%= text_field :education, :reg_num %></td>
+          <td><%= label :education, :Score_or_Result %></td><td>
+          <%= text_field :education, :result %></td>
+          <td><%= label :education, :Leaving_Reason %></td><td>
+          <%= select :education, :leaving_reason, ["Graduated", "Withdrawal", "Transfer", "Other"] %></td></tr>
+          </tr></table></fieldset>
+      </td></tr>
+      
+      <tr><td colspan=6>
+         <fieldset>
+        <legend align="left">Employment</legend>
+          <table><tr><td><%= label :employment, :Job_Type %></td><td>
+          <%= text_field :employment, :job_type %></td>
+          <td><%= label :employment, :Employer_Name %></td><td>
+          <%= text_field :employment, :employer_name %></td>
+          <td><%= label :employment, :Employer_Address %></td><td>
+          <%= text_field :employment, :employer_add %></td></tr></table></fieldset>
+      </td></tr>
+      
+      </table>
+ 
+  
+</div>
+  <div align="center">  <%= submit_tag "Create Profile" %>  </div>
+    <% end %>

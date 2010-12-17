@@ -1,2 +1,20 @@
-<h1>Students#edit</h1>
-<p>Find me in app/views/students/edit.html.erb</p>
+<center><br><h3>Edit Student Detail</h3><br>
+  <hr />
+<%= form_for @person, :url => { :action => "update" }, :html => { :method => :get } do |p| %>
+<%= p.hidden_field :id %>
+<br><table><tr><td><strong>First Name: </strong> </td>
+               <td><%= p.text_field :first_name %></td></tr>
+           <tr><td><strong>Last Name :</strong> </td>
+               <td><%= p.text_field :middle_name %></td></tr>
+           <tr><td><strong>Sex: </strong> </td>
+               <td><%= p.text_field :sex %></td></tr>
+           <tr><td><strong>Date of birth:</strong> </td>
+               <td><%= p.date_select  :birth_date %></td></tr>
+           <tr><td><strong>Email:</strong></td>
+               <td><%= p.text_field :email %></td></tr>
+    </table>
+
+<%= p.submit "Save changes" %><br>
+<% end %>
+
+<%= link_to "Back to students list", {:action => 'list' } %></center>

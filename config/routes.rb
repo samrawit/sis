@@ -1,13 +1,18 @@
 Sis::Application.routes.draw do
-  get "students/index"
-
-  get "students/show"
-
+ #resources :students 
+ get "students/index"
   get "students/new"
-
+ post "students/save"
+  
+  get "students/list"
+  
+  get "students/show"
+  
   get "students/edit"
 
-  get "students/yaredo"
+  get "students/update"
+  
+  get "students/delete"
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
