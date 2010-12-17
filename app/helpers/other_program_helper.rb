@@ -1,0 +1,2 @@
+module OtherProgramHelper
+end

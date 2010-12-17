@@ -1,0 +1,25 @@
+<%= form_tag :action => "Add" do %>  
+   <fieldset><legend>Department Choice</legend>
+    <%=label :undergraddepartment,:Department_Name %>
+    <%=text_field :undergraddepartment,:departmentname%>
+    <%=label :undergraddepartment,:preference %>
+    <%=text_field :undergraddepartment,:preference%>
+    <%=submit_tag"Add"%>
+    </fieldset>
+  <% end %>
+  <fieldset>     <legend> "Under Graduate Info"</legend>
+    <table border="1">
+       <tr>
+         <td>Department_name</td>
+         <td>Preference</td>
+       </tr>
+       <tr>
+         <% if @department != nil%>
+         
+         <td><%= @department %></td>
+         <td><%= @preference %></td>        
+       </tr>        
+        <% end %>
+     
+    </table>
+   </fieldset>

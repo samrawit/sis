@@ -1,0 +1,23 @@
+Enrollment type : <%=   @program.enrollmenttype %> <br/><br/>
+Program at: <%=   @program.programat %> <br/><br/>
+Band: <%= @program.band %> <br/><br/>
+<% @program.undergrad_departments.each do |department| %>
+Department Name: <%= department.departmentname%><br/><br/>
+Preference: <%= department.preference %>
+<% end %>
+
+<%= form_tag :action => "create_department" %>
+ <p>Enter Department Information</p>
+   <div>
+      <%= label(:undergraddepartment, :departmentname)%>
+      <%= text_field(:undergraddepartment, :departmentname)%><br/><br/>
+    </div>
+    <div>
+      <%= 
+      label(:undergraddepartment, :preference)%>
+      <%= text_field(:undergraddepartment, :preference)%>
+    </div>
+  
+ <div class="actions">
+    <%= submit_tag  "save"%>
+  </div>

@@ -1,0 +1,33 @@
+<p>
+  <b>Student ID:</b>
+  <%= @clearance.student_id %>
+</p>
+<p>
+  <b>Clearance For:</b>
+  <%= @clearance.reason_for %>
+</p>
+
+<p>
+  <b>Class Year:</b>
+  <%= @clearance.class_year %>
+</p>
+
+<p>
+  <b>Last Date Attended:</b>
+  <%= @clearance.last_date_attend %>
+  </p>
+  <p>
+  <b>Clearance Semister:</b>
+  <%= @clearance.clearance_semister %>
+</p>
+<p>
+  <b>Clearance Date:</b>
+  <%= @clearance.clearance_date %>
+</p>
+<p>
+  <b>Reason for Withdrawal:</b>
+  <%= @clearance.reason_for_withdrawal %>
+</p>
+<%= link_to 'edit', :action => 'edit' %>
+<%= link_to 'Back', :action => 'new' %>
+

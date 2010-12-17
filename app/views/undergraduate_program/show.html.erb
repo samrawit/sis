@@ -1,0 +1,51 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+   "http://www.w3.org/TR/html4/strict.dtd">
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>show.html</title>
+    <%= javascript_include_tag :defaults %>
+    <%= yield :head %>
+  </head>
+  
+  <body>
+     <%= flash[:notice]%>
+<fieldset>     <legend> "Under Graduate Info"</legend>
+    <table border="1">
+       <tr>
+         <td>Enrollment Type</td>
+         <td>Program At</td>
+         <td>Streem(band)</td> 
+       </tr>
+       <tr>
+         <% for value in @undergraduateprogram %>
+         <td><%= value.enrollmenttype %></td>
+         <td><%= value.programat %></td>
+         <td><%= value.band %></td>
+         <td>
+           <%= link_to 'Edit', :controller => :undergraduate_program, :action => :edit, :id => value.id %>
+         </td>
+
+       </tr>        
+        <% end %>
+     </table>
+     
+    </fieldset>
+<fieldset><legend> "Under Graduate Info"</legend>
+    <table border="1">
+       <tr>
+         <td>Department_name</td>
+         <td>Preference</td>
+                </tr>
+                
+       <tr>
+      
+     </table>
+     
+     
+    </fieldset>
+
+     <!-- <%= render 'undergraddepartment' %>-->
+      
+    </body>
+</html>

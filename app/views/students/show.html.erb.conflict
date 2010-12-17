@@ -1,0 +1,39 @@
+<h1>Students#show</h1>
+<p>Find me in app/views/students/show.html.erb</p>
+
+<<<<<<< HEAD
+=======
+
+
+<!--<%= @person.inspect %>
+<%= @stud.inspect %><br/><br/>-->
+
+  <p> Search results </p>
+<% if @student.empty? %>
+  <p> No such Record </p> 
+<% else %>
+  <table border="+1">
+    <tr>
+      <td>ID Number</td>
+      <td>Name</td>
+      <td>Middle Name</td>
+      <td>Last Name</td>
+      <td>Sex</td>
+
+    </tr>
+    
+    <% for student in @student %>
+       <tr>
+      <td><%= student.id_number %></td>
+      <td><%= student.first_name %></td>
+      <td><%= student.middle_name %></td>
+      <td><%= student.last_name %></td>
+      <td><%= student.sex %></td>
+      </tr>
+    <% end %>
+   
+  </table>
+<% end %>
+>>>>>>> 26e74c7466fd72eb4a1cdfe74d77337dbc048d1d
+
+<%= link_to 'Back to Search', :action => 'search' %>

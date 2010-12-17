@@ -1,0 +1,11 @@
+
+<%= form_tag clearance_searchresult_path, :method => 'get' do %>
+  <%= label_tag "Search by ID" %>
+  <%= text_field_tag :student_id, params[:student_id] %>
+  <%= submit_tag "Submit" %>
+<% end %>
+
+
+
+
+

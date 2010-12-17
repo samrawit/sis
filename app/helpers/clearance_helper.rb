@@ -1,0 +1,2 @@
+module ClearanceHelper
+end

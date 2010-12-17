@@ -1,0 +1,31 @@
+
+<%= form_tag :action => "create" do %>
+<div>
+    <%= label :undergraduateprogram, :enrollmenttype %><br />
+    <%= text_field :undergraduateprogram, :enrollmenttype %>
+  </div>
+  <div >
+    <%= label :undergraduateprogram, :programat %><br />
+    <%= text_field :undergraduateprogram, :programat %>
+  </div>
+  <div>
+    <%= label :undergraduateprogram, :band %><br />
+    <%= text_field :undergraduateprogram, :band %>
+    
+  </div>
+   <p>Enter Department Information</p>
+   <div>
+      <%= label(:undergraddepartment, :departmentname)%>
+      <%= text_field(:undergraddepartment, :departmentname)%><br/><br/>
+    </div>
+    <div>
+      <%= 
+      label(:undergraddepartment, :preference)%>
+      <%= text_field(:undergraddepartment, :preference)%>
+    </div>
+  
+ <div class="actions">
+    <%= submit_tag  "save"%>
+  </div>
+
+<% end %>

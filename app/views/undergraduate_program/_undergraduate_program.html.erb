@@ -1,0 +1,61 @@
+<!--This view renders undergraduate program form and undergraduate department forms-->
+<%= form_tag :action => "create" do %>
+<fieldset><legend>UnderGraduate Program/Admission Application</legend>
+  <% if @undergraduateprogram.errors.any? %>
+    <fieldset>
+    <ul>
+      <% @undergraduateprogram.errors.full_messages.each do |msg|%>
+        <li><%= msg %></li>
+        
+      <% end %>      
+       
+  </ul>
+  </fieldset>
+  <% end %>
+<div>
+  <table>
+    <tr>
+      <td>
+        <%= label :undergraduateprogram, :Enrollment_Type %>
+    </td>
+  <td><%= select :undergraduateprogram,:enrollmenttype, ["","Regular","Extension","In-Service","Distance"] %></td>
+  <td><%= label :undergraduateprogram, :Program_At %></td>
+  <td><%= select :undergraduateprogram, :programat,["","Year I level","Advance Standing level","Transefer"] %></td>
+  <td> <%= label :undergraduateprogram, :Band %></td>
+  <td><%= text_field :undergraduateprogram, :band %></td>
+  </tr>
+  </table>
+  </div> 
+  </fieldset>
+   <fieldset><legend>Department Choice</legend>
+    <%=label :undergraddepartment,:Department_Name %>
+    <%=text_field :undergraddepartment,:departmentname%>
+    <%=label :undergraddepartment,:preference %>
+    <%=text_field :undergraddepartment,:preference%>
+    <%=submit_tag"Add"%>
+    </fieldset>
+ 
+ <!-- <fieldset>     <legend> "Under Graduate Info"</legend>
+    <table border="1">
+       <tr>
+         <td>Department_name</td>
+         <td>Preference</td>
+       </tr>
+       <tr>
+         <% if @showugd != nil%>
+         <% for value in @showugd %>
+         <td><%= value.departmentname %></td>
+         <td><%= value.preference %></td>
+        
+       </tr>        
+        <% end %>
+        <% end %>
+     </table> -->
+ 
+  <!-- <%= render 'undergraddepartment' %>-->
+ <br> </br>
+   <div class="actions">
+    <%= submit_tag  "save"%>
+  </div>
+
+<% end %>

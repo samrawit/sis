@@ -10,6 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(:version => 20101216113852) do
 
   create_table "educational_bgds", :force => true do |t|
@@ -45,6 +46,20 @@ ActiveRecord::Schema.define(:version => 20101216113852) do
     t.integer  "mothers_ed_level"
     t.datetime "created_at"
     t.datetime "updated_at"
+=======
+ActiveRecord::Schema.define(:version => 20101215171523) do
+
+  create_table "clearances", :force => true do |t|
+    t.string   "reason_for"
+    t.date     "last_date_attend"
+    t.integer  "class_year"
+    t.integer  "clearance_semister"
+    t.date     "clearance_date"
+    t.text     "reason_for_withdrawal"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.integer  "student_id"
+>>>>>>> 53a8e214d8da48fff61c121e2740ad8404ec9b0e
   end
 
   create_table "people", :force => true do |t|
@@ -77,6 +92,7 @@ ActiveRecord::Schema.define(:version => 20101216113852) do
 
   create_table "students", :force => true do |t|
     t.integer  "person_id"
+<<<<<<< HEAD
     t.string   "stdID"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -87,8 +103,28 @@ ActiveRecord::Schema.define(:version => 20101216113852) do
     t.integer  "educational_bgd_id"
     t.string   "name"
     t.string   "result"
+=======
+    t.string   "id_number"
     t.datetime "created_at"
     t.datetime "updated_at"
+  end
+
+  create_table "undergrad_departments", :force => true do |t|
+    t.string   "departmentname"
+    t.integer  "preference"
+    t.integer  "undergraduate_program_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "undergraduate_programs", :force => true do |t|
+>>>>>>> 53a8e214d8da48fff61c121e2740ad8404ec9b0e
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "enrollmenttype"
+    t.string   "programat"
+    t.integer  "band"
+    t.integer  "student_id"
   end
 
 end
