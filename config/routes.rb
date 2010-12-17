@@ -1,8 +1,14 @@
 Sis::Application.routes.draw do
+<<<<<<< HEAD
   
+=======
+   resources :clearance
+>>>>>>> ebc03959f7c33256d9515de6fe28e3e1ac12169e
   get "students/index"
 
   get "students/show"
+  
+  get "students/search"
 
   get "students/new"
 
@@ -11,6 +17,7 @@ Sis::Application.routes.draw do
   
   
   get "students/yaredo"
+<<<<<<< HEAD
   get "undergraduate_program/new"
   post "undergraduate_program/Add"
   post"undergraduate_program/create"
@@ -22,6 +29,19 @@ Sis::Application.routes.draw do
   get "undergrad_department/new"
   
   get "undergraduate_program/edit"
+=======
+   get "students/search"
+   
+  
+  
+  get "clearance/show"
+  get "clearance/new"
+  post "clearance/create"
+  post "clearance/update"
+  get "clearance/edit"
+  get "clearance/searchresult"
+  get "clearance/search"
+>>>>>>> ebc03959f7c33256d9515de6fe28e3e1ac12169e
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
