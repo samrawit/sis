@@ -1,6 +1,8 @@
-<!--<h1>Students#show</h1>-->
-<!--<p>Find me in app/views/students/show.html.erb</p>-->
+<h1>Students#show</h1>
+<p>Find me in app/views/students/show.html.erb</p>
 
+<<<<<<< HEAD
+=======
 
 
 <!--<%= @person.inspect %>
@@ -32,5 +34,6 @@
    
   </table>
 <% end %>
+>>>>>>> 26e74c7466fd72eb4a1cdfe74d77337dbc048d1d
 
 <%= link_to 'Back to Search', :action => 'search' %>

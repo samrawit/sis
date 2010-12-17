@@ -65,6 +65,20 @@
 
 			<!-- Method Quickref -->
 			
+<<<<<<< HEAD
+=======
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-i-search">#search</a></li>
+					
+					<li><a href="#method-i-show">#show</a></li>
+					
+				</ul>
+			</div>
+			
+>>>>>>> 26e74c7466fd72eb4a1cdfe74d77337dbc048d1d
 
 			<!-- Included Modules -->
 			
@@ -102,12 +116,15 @@
 				
 					<li><a href="./ApplicationHelper.html">ApplicationHelper</a></li>
 				
+<<<<<<< HEAD
 					<li><a href="./Clearance.html">Clearance</a></li>
 				
 					<li><a href="./ClearanceController.html">ClearanceController</a></li>
 				
 					<li><a href="./ClearanceHelper.html">ClearanceHelper</a></li>
 				
+=======
+>>>>>>> 26e74c7466fd72eb4a1cdfe74d77337dbc048d1d
 					<li><a href="./Person.html">Person</a></li>
 				
 					<li><a href="./Student.html">Student</a></li>
@@ -139,6 +156,90 @@
 
 		<!-- Methods -->
 		
+<<<<<<< HEAD
+=======
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="search-method" class="method-detail ">
+				<a name="method-i-search"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">search</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="search-source">
+<pre>
+   <span class="ruby-comment cmt"># File app/controllers/students_controller.rb, line 3</span>
+3:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">search</span>
+4:     <span class="ruby-ivar">@title</span> = <span class="ruby-value str">&quot;Search&quot;</span>    
+5:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="show-method" class="method-detail ">
+				<a name="method-i-show"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">show</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+the following action accepts the search request from the view,
+search.html.erb, the search request might be <a
+href="Student.html">Student</a> ID, Name, Middle Name or Sex 
+params[:fname], params[:lname], params[:stud_id], params[:sex] accepts
+first name, middle name, ID and Sex respectively 
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="show-source">
+<pre>
+    <span class="ruby-comment cmt"># File app/controllers/students_controller.rb, line 9</span>
+ 9:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">show</span>    
+10:     <span class="ruby-constant">Rails</span>.<span class="ruby-identifier">logger</span>.<span class="ruby-identifier">info</span>(<span class="ruby-value str">&quot;------------------&quot;</span><span class="ruby-operator">+</span><span class="ruby-ivar">@student</span>.<span class="ruby-identifier">inspect</span>)
+11:     <span class="ruby-ivar">@student</span> = <span class="ruby-constant">Student</span>.<span class="ruby-identifier">search_by_id</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:fname</span>], <span class="ruby-identifier">params</span>[<span class="ruby-value">:lname</span>], <span class="ruby-identifier">params</span>[<span class="ruby-value">:stud_id</span>], <span class="ruby-identifier">params</span>[<span class="ruby-value">:sex</span>])
+12:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+>>>>>>> 26e74c7466fd72eb4a1cdfe74d77337dbc048d1d
 
 	</div>
 

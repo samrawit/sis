@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 Thu, 16 Dec 2010 14:46:06 +0300
 doc/README_FOR_APP	Tue, 14 Dec 2010 09:16:51 +0300
 app/models/person.rb	Wed, 15 Dec 2010 09:19:57 +0300
@@ -9,3 +10,13 @@ app/helpers/clearance_helper.rb	Tue, 14 Dec 2010 15:39:06 +0300
 app/controllers/application_controller.rb	Tue, 14 Dec 2010 09:16:51 +0300
 app/controllers/students_controller.rb	Wed, 15 Dec 2010 17:07:07 +0300
 app/controllers/clearance_controller.rb	Thu, 16 Dec 2010 14:16:41 +0300
+=======
+Fri, 17 Dec 2010 03:18:06 +0300
+doc/README_FOR_APP	Tue, 14 Dec 2010 04:16:07 +0300
+app/helpers/application_helper.rb	Tue, 14 Dec 2010 04:16:07 +0300
+app/helpers/students_helper.rb	Tue, 14 Dec 2010 04:16:07 +0300
+app/controllers/application_controller.rb	Tue, 14 Dec 2010 04:16:07 +0300
+app/controllers/students_controller.rb	Fri, 17 Dec 2010 03:17:54 +0300
+app/models/student.rb	Fri, 17 Dec 2010 03:13:55 +0300
+app/models/person.rb	Wed, 15 Dec 2010 11:21:05 +0300
+>>>>>>> 26e74c7466fd72eb4a1cdfe74d77337dbc048d1d
